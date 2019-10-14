@@ -9,3 +9,13 @@
 - 5 min break
 - Run Through Linked Lists [I DO]
 - Implement some Linked List Methods [WE DO]
+
+## Day 2 Agenda
+- Recap Linked Lists [I DO]
+- Queue using Linked List Q & A [WE DO]
+- 5 min break
+- Interview Prep Linked Lists [YOU DO]
+    1. Find and Return Middle Node (option 1)
+    2. Reverse a SLL without Recursion (option 2)
+- 5 min break
+- Implement Queue [WE DO]
