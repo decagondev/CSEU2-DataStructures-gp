@@ -5,7 +5,7 @@
 - Talk About Arrays / Lists [I DO]
 - 5 min break
 - Talk about Stacks [WE DO]
-- Talk about Quese [WE DO]
+- Talk about Queues [WE DO]
 - 5 min break
 - Run Through Linked Lists [I DO]
 - Implement some Linked List Methods [WE DO]
