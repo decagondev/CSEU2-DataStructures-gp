@@ -19,3 +19,12 @@
     2. Reverse a SLL without Recursion (option 2)
 - 5 min break
 - Implement Text Buffer (if time permits) [WE DO]
+
+## Day 3 Agenda
+- Recap LRU Cache [I DO]
+- Intro to BST [WE DO]
+- 5 min break
+- Research BST and Build a plan [WE DO]
+- 5 min break
+- Review - What do BSTs look like [WE DO]
+- Wrapup [YOU DO]
