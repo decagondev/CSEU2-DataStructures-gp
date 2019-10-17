@@ -16,59 +16,114 @@ class BinarySearchTree:
     def insert(self, value):
         # LEFT CASE
         # check if the new nodes value is less than our current ones value
+        if value < self.value:
             # if the is no left child, 
+            if not self.left:
                 # place a new node here
+                self.left = BinarySearchTree(value)
             # otherwise
+            else:
                 # repeat process for left
+                self.left.insert(value)
         # RIGHT CASE
         # check if the new nodes value is greater than or equal to the current parent value
+        elif value >= self.value:
             # if there is no right child here, 
+            if not self.right:
                 # place a new one
+                self.right = BinarySearchTree(value)
             # otherwise
+            else:
                 # repeat process right
-        pass
+                self.right.insert(value)
 
     # Return True if the tree contains the value
     # False if it does not
     def contains(self, target):
         # BASE CASE
-
+        # if the value of the current node matches the target, we have found a match
+        if self.value == target:
+            return True
         # LEFT CASE
-
+        # if there is a left child, do a recursive call to contains on left
+        if target < self.value:
+            if not self.left:
+                return False
+            else:
+                return self.left.contains(target)
         # RIGHT CASE
-        pass
+        # if there is a right child, do a recursive call to contains on right
+        if target >= self.value:
+            if not self.right:
+                return False
+            else:
+                return self.right.contains(target)
 
     # Return the maximum value found in the tree
     def get_max(self):
         # BASE CASE 
         # if empty tree
+        if not self:
             # return none
+            return None
         
         # RECURSIVE
-        # if the the is no right value
-            # return the root value
-        # return the get max of the the right node
+        # # if the the is no right value
+        # if not self.right:
+        #     # return the root value
+        #     return self.value
+        # # return the get max of the the right node
+        # return self.right.get_max()
 
         # ITTERATIVE
         # set a max value variable to keep track of max value
+        max_value = self.value
         # get a ref to current node
+        current_node = self
         # check if we are at a valid tree node
+        while current_node:
             # if our current value is greater than the max value
+            if current_node.value > max_value:
                 # update the max value
+                max_value = current_node.value
             # move on to the next right node in the tree
             # setting the current node to the current nodes right
+            current_node = current_node.right
         # return our max value
-        pass
+        return max_value
 
     # Call the function `cb` on the value of each node
     # You may use a recursive or iterative approach
     def for_each(self, cb):
         # base case
-
+        if self.value:
+            cb(self.value)
         # left case
-
+        if self.left:
+            self.left.for_each(cb)
         # right case
-        pass
+        if self.right:
+            self.right.for_each(cb)
+
+    def itter_df_for_each(self, cb):
+        # create a new stack to hold our traversal data
+        stack = []
+        # pushing the root node on to the stack
+        stack.append(self)
+        # while there are still nodes on the stack
+        while len(stack):
+            # pop the current node off the stack
+            current_node = stack.pop()
+            # if currnt node has a right child
+            if current_node.right:
+                # push the current nodes right node on to the stack
+                stack.append(current_node.right)
+            # if the current node has a left child
+            if current_node.left:
+                # push the current nodes left node on to the stack
+                stack.append(current_node.left)
+            # call the callback on the current nodes value
+            cb(current_node.value)
 
     # DAY 2 Project -----------------------
 
