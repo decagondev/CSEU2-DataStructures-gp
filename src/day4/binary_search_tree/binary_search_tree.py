@@ -125,6 +125,26 @@ class BinarySearchTree:
             # call the callback on the current nodes value
             cb(current_node.value)
 
+    def itter_bf_for_each(self, cb):
+        # create a new queue to hold our traversal data
+        q = []
+        # enqueue the root node on to the queue
+        q.append(self)
+        # while there are still nodes on the queue
+        while len(q):
+            # dequeue the current node off the queue
+            current_node = q.pop(0)
+            # if currnt node has a right child
+            if current_node.right:
+                # push the current nodes right node on to the stack
+                q.append(current_node.right)
+            # if the current node has a left child
+            if current_node.left:
+                # push the current nodes left node on to the stack
+                q.append(current_node.left)
+            # call the callback on the current nodes value
+            cb(current_node.value)
+
     # DAY 2 Project -----------------------
 
     # Print all the values in order from low to high
