@@ -38,8 +38,10 @@
 - Tree Traversal Overview (forEach) [WE DO]
 - 5 min break
 - Traversal Vs Search [WE DO]
-- DFT (Polya / Pseudocode) [WE DO]
+    - Traversal will traverse the entire tree
+    - Search will stop when it find what it is looking for
 - 5 min break
+- DFT (Polya / Pseudocode) [WE DO]
 - BFT (Basic Understanding) [I DO]
 - BFT (Polya / Pseudocode) [YOU DO]
 - Wrap Up
