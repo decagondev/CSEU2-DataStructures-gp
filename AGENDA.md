@@ -32,3 +32,14 @@
 - 5 min break
 - Review - What do BSTs look like [WE DO]
 - Wrapup [YOU DO]
+
+## Day 4 Agenda
+- BST Review and Day 3 Solution [I DO]
+- Tree Traversal Overview (forEach) [WE DO]
+- 5 min break
+- Traversal Vs Search [WE DO]
+- DFT (Polya / Pseudocode) [WE DO]
+- 5 min break
+- BFT (Basic Understanding) [I DO]
+- BFT (Polya / Pseudocode) [YOU DO]
+- Wrap Up
